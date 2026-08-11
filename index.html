@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ED Jewelry | Compra y Venta de Oro</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Fuente elegante -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- =========================
+         ENCABEZADO
+    ========================== -->
+    <header class="header">
+        <div class="logo">ED <span>jewelry</span></div>
+
+        <div class="location">
+            📍 Varadero
+        </div>
+    </header>
+
+
+    <!-- =========================
+         PRESENTACIÓN PRINCIPAL
+    ========================== -->
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <p class="small-title">JOYERÍA · COMPRA & VENTA</p>
+
+                <h1>
+                    El valor del oro,<br>
+                    <span>en tus manos.</span>
+                </h1>
+
+                <p class="hero-text">
+                    Compra y venta de oro y joyas de oro en Varadero.
+                    Consulta nuestros precios y descubre cuánto vale tu prenda.
+                </p>
+
+                <div class="hero-buttons">
+                    <a
+                        href="https://wa.me/+5354893180"
+                        target="_blank"
+                        class="main-button"
+                    >
+                        Contactar por WhatsApp
+                    </a>
+
+                    <a
+                        href="https://wa.me/+5354893180?text=Mandame%20el%20cat%C3%A1logo%20por%20favor"
+                        target="_blank"
+                        class="catalog-button"
+                    >
+                        Presione para obtener el catálogo de prendas
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="hero-decoration">
+                <div class="gold-circle">
+                    <span>ED</span>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PRECIOS DEL ORO
+        ========================== -->
+        <section class="gold-prices">
+
+            <p class="section-subtitle">COTIZACIÓN</p>
+
+            <h2>Precios del oro</h2>
+
+            <p class="instruction">
+                ✦ Presione para calcular el precio de su prenda ✦
+            </p>
+
+
+            <div class="price-buttons">
+
+                <button
+                    class="gold-button"
+                    onclick="abrirCalculadora('criollo')"
+                >
+                    <span class="gold-number">1</span>
+                    <span class="gold-name">Criollo</span>
+                    <span class="arrow">→</span>
+                </button>
+
+
+                <button
+                    class="gold-button"
+                    onclick="abrirCalculadora('10k')"
+                >
+                    <span class="gold-number">2</span>
+                    <span class="gold-name">10 kilates Fábrica</span>
+                    <span class="arrow">→</span>
+                </button>
+
+
+                <button
+                    class="gold-button"
+                    onclick="abrirCalculadora('14k')"
+                >
+                    <span class="gold-number">3</span>
+                    <span class="gold-name">14 kilates</span>
+                    <span class="arrow">→</span>
+                </button>
+
+
+                <button
+                    class="gold-button"
+                    onclick="abrirCalculadora('18k')"
+                >
+                    <span class="gold-number">4</span>
+                    <span class="gold-name">18 kilates</span>
+                    <span class="arrow">→</span>
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+<!-- =========================
+         VENTANA DE CALCULADORA
+    ========================== -->
+    <div id="calculatorModal" class="modal">
+
+        <div class="calculator-box">
+
+            <button
+                class="close-button"
+                onclick="cerrarCalculadora()"
+                aria-label="Cerrar"
+            >
+                ×
+            </button>
+
+            <p class="section-subtitle">COTIZACIÓN</p>
+
+            <h2 id="calculatorTitle">18 kilates</h2>
+
+            <div class="current-price">
+
+                <span>Precio del oro</span>
+
+                <strong id="goldPrice">
+                    $0
+                </strong>
+
+            </div>
+
+
+            <div class="calculator">
+
+                <label for="weight">
+                    Peso de la joya
+                </label>
+
+                <div class="input-container">
+
+                    <input
+                        type="number"
+                        id="weight"
+                        placeholder="Introduzca el peso"
+                        min="0"
+                        step="0.01"
+                        oninput="calcularPrecio()"
+                    >
+
+                    <span>gramos</span>
+
+                </div>
+
+
+                <div class="result">
+
+                    <span>Valor estimado</span>
+
+                    <strong id="calculatedPrice">
+                        $0.00
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <a
+                id="whatsappCalculator"
+                href="https://wa.me/+554893180"
+                target="_blank"
+                class="main-button calculator-whatsapp"
+            >
+                Contactar por WhatsApp
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         PIE DE PÁGINA
+    ========================== -->
+    <footer>
+
+        <div class="footer-logo">
+            ED <span>jewelry</span>
+        </div>
+
+        <p>Compra · Venta · Oro & Joyas</p>
+
+        <p>📍 Varadero</p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
