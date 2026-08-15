@@ -1,38 +1,23 @@
-/* =========================================
-   PRECIOS DEL ORO
-   =========================================
-
-   MODIFICA SOLAMENTE LOS NÚMEROS DE AQUÍ.
-
-   El precio corresponde a 1 gramo.
-
-   Ejemplo:
-   criollo: 100
-   significa que 1 gramo de oro criollo
-   cuesta 100.
-
-========================================= */
-
 const preciosOro = {
 
     criollo: {
         nombre: "Criollo",
-        precio: 33
+        precio: 37
     },
 
     "10k": {
         nombre: "10 kilates Fábrica",
-        precio: 42
+        precio: 445
     },
 
     "14k": {
         nombre: "14 kilates",
-        precio: 62
+        precio: 64
     },
 
     "18k": {
         nombre: "18 kilates",
-        precio: 82
+        precio: 84
     }
 
 };
